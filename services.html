@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services | EDSAN Global Resources</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#5C0100'
+          },
+          fontFamily: {
+            sans: ['"Nunito Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- GSAP -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="font-sans text-gray-900">
+
+<!-- ================= NAVBAR ================= -->
+<header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="assets/logo.jpeg" alt="EDSAN Logo" class="h-12 w-auto" />
+      <span class="font-bold text-xl text-brand">EDSAN Global Resources</span>
+    </a>
+    <nav class="hidden md:flex gap-8 text-sm font-medium">
+      <a href="index.html" class="hover:text-brand">Home</a>
+      <a href="about.html" class="hover:text-brand">About Us</a>
+      <a href="services.html" class="text-brand">Services</a>
+      <a href="hse.html" class="hover:text-brand">HSE</a>
+      <a href="partners.html" class="hover:text-brand">Partners</a>
+      <a href="projects.html" class="hover:text-brand">Projects</a>
+      <a href="contact.html" class="hover:text-brand">Contact</a>
+    </nav>
+
+    <!-- Hamburger Button -->
+    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-800 focus:outline-none z-50 relative">
+      <svg class="w-6 h-6 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center gap-8 text-xl font-medium">
+    <a href="index.html" class="hover:text-brand" onclick="toggleMenu()">Home</a>
+    <a href="about.html" class="hover:text-brand" onclick="toggleMenu()">About Us</a>
+    <a href="services.html" class="hover:text-brand" onclick="toggleMenu()">Services</a>
+    <a href="hse.html" class="hover:text-brand" onclick="toggleMenu()">HSE</a>
+    <a href="partners.html" class="hover:text-brand" onclick="toggleMenu()">Partners</a>
+    <a href="projects.html" class="hover:text-brand" onclick="toggleMenu()">Projects</a>
+    <a href="contact.html" class="hover:text-brand" onclick="toggleMenu()">Contact</a>
+  </div>
+</header>
+
+<!-- ================= PAGE HERO ================= -->
+<section class="pt-32 pb-20 bg-gray-900 text-white">
+  <div class="max-w-7xl mx-auto px-6 reveal">
+    <h2 class="text-5xl font-extrabold mb-4">Our Services</h2>
+    <p class="max-w-3xl text-gray-300 text-lg">
+      Delivering a broad spectrum of engineering, inspection, and technical
+      services to multinational, industrial, and private sector clients.
+    </p>
+  </div>
+</section>
+
+<!-- ================= INTRO ================= -->
+<section class="py-20 bg-white reveal">
+  <div class="max-w-7xl mx-auto px-6">
+    <p class="max-w-4xl text-gray-700 leading-relaxed">
+      Over the years, EDSAN Global Resources has been actively involved in
+      providing comprehensive engineering and related services to
+      multinational oil and gas companies, industrial groups, and private
+      clients. Our services are structured into specialized service groups,
+      ensuring efficiency, quality delivery, and strict compliance with
+      industry standards.
+    </p>
+  </div>
+</section>
+
+<!-- ================= IMAGE CAROUSEL ================= -->
+<section class="py-16 bg-gray-50 reveal">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-bold mb-8">Operational Capabilities</h3>
+
+    <div class="relative overflow-hidden rounded-xl shadow-lg">
+      <div class="service-slide h-[420px] bg-cover bg-center"
+           style="background-image:url('assets/image2.jpeg')"></div>
+      <div class="service-slide h-[420px] bg-cover bg-center absolute inset-0 opacity-0"
+           style="background-image:url('assets/image3.jpeg')"></div>
+      <div class="service-slide h-[420px] bg-cover bg-center absolute inset-0 opacity-0"
+           style="background-image:url('assets/image1.jpeg')"></div>
+
+      <div class="absolute inset-0 bg-black/30"></div>
+
+      <div class="absolute bottom-6 left-6 text-white max-w-xl">
+        <h4 class="text-2xl font-bold mb-2">Inspection & Engineering Operations</h4>
+        <p class="text-sm text-gray-200">
+          Certified inspection, testing, and engineering services delivered
+          with safety, accuracy, and operational discipline.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICE GROUP I ================= -->
+<section class="py-20 bg-white reveal">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-brand mb-6">
+      Service Group I – Inspection Services
+    </h3>
+
+    <ul class="list-disc list-inside text-gray-700 space-y-3 max-w-4xl">
+      <li>Quality Assurance & Quality Control (QA/QC) Services</li>
+      <li>
+        Non-Destructive Testing (NDT) including:
+        Radiographic Testing (RT), Ultrasonic Testing (UT),
+        Magnetic Particle Inspection (MPI), Dye Penetrant Inspection (DPI)
+      </li>
+      <li>Welding Inspection Services</li>
+      <li>Post Weld Heat Treatment (PWHT) Services</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= OTHER SERVICE GROUPS ================= -->
+<section class="py-20 bg-gray-50 reveal">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-bold mb-10">Other Service Groups</h3>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white p-6 rounded shadow">
+        <h4 class="font-semibold text-brand mb-2">
+          Service Group II – Supply & Support
+        </h4>
+        <p class="text-sm text-gray-600">
+          Provision of technical supplies, logistics support, and operational
+          assistance for project execution.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow">
+        <h4 class="font-semibold text-brand mb-2">
+          Service Group III – Environmental & Remediation
+        </h4>
+        <p class="text-sm text-gray-600">
+          Environmental management, remediation services, and compliance
+          support for sustainable operations.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow">
+        <h4 class="font-semibold text-brand mb-2">
+          Service Group IV – General Engineering
+        </h4>
+        <p class="text-sm text-gray-600">
+          Mechanical, civil, and electrical engineering services for oilfield
+          and industrial projects.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow">
+        <h4 class="font-semibold text-brand mb-2">
+          Service Group V – Manufacturer Representation
+        </h4>
+        <p class="text-sm text-gray-600">
+          Acting as authorized representatives for equipment and technology
+          manufacturers.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow md:col-span-2">
+        <h4 class="font-semibold text-brand mb-2">
+          Service Group VI – Software Development & Digital Solutions
+        </h4>
+        <p class="text-sm text-gray-600">
+          Development of software applications, digital platforms, and
+          technology-driven solutions supporting operational efficiency.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EQUIPMENT ================= -->
+<section class="py-20 bg-white reveal">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-brand mb-4">Our Equipment</h3>
+    <p class="max-w-4xl text-gray-700 leading-relaxed">
+      In addition to skilled and experienced operators, reliable equipment is
+      essential for efficient project execution. EDSAN Global Resources
+      carefully selects equipment best suited for prompt, safe, and effective
+      on-site project delivery in line with client demands.
+    </p>
+
+    <a href="#" class="inline-block mt-6 text-brand border-b-2 border-brand font-medium">
+      View Our Equipment
+    </a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-gray-300 py-16">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+    <div>
+      <img src="assets/logo.jpeg" alt="EDSAN Logo" class="h-12 w-auto mb-4 rounded" />
+      <h4 class="text-white font-semibold mb-4">EDSAN Global Resources</h4>
+      <p>Engineering & Oilfield Construction Services</p>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4">Contact</h4>
+      <p>+234 703 448 0707</p>
+      <p>enquiry@edsanglobal.com</p>
+    </div>
+    <div>
+      <p>© 2026. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+  // Mobile Menu Logic
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const icon = btn.querySelector('svg path');
+  let isMenuOpen = false;
+
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    if (isMenuOpen) {
+      menu.classList.remove('translate-x-full');
+      icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+      document.body.style.overflow = 'hidden';
+    } else {
+      menu.classList.add('translate-x-full');
+      icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+      document.body.style.overflow = '';
+    }
+  }
+
+  btn.addEventListener('click', toggleMenu);
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Scroll reveals
+  gsap.utils.toArray(".reveal").forEach(section => {
+    gsap.from(section, {
+      scrollTrigger: { trigger: section, start: "top 80%" },
+      opacity: 0,
+      y: 40,
+      duration: 1,
+      ease: "power3.out"
+    });
+  });
+
+  // Services carousel
+  const serviceSlides = document.querySelectorAll(".service-slide");
+  let currentSlide = 0;
+
+  setInterval(() => {
+    gsap.to(serviceSlides[currentSlide], { opacity: 0, duration: 1 });
+    currentSlide = (currentSlide + 1) % serviceSlides.length;
+    gsap.to(serviceSlides[currentSlide], { opacity: 1, duration: 1 });
+  }, 4500);
+</script>
+
+</body>
+</html>

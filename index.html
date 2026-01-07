@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EDSAN Global Resources</title>
+  <!-- Google Font: Nunito Sans -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#5C0100'
+          },
+          fontFamily: {
+          sans: ['"Nunito Sans"', 'system-ui', 'sans-serif']
+        },
+        animation: {
+          marquee: 'marquee 25s linear infinite'
+        },
+        keyframes: {
+          marquee: {
+            '0%': { transform: 'translateX(0%)' },
+            '100%': { transform: 'translateX(-50%)' }
+          }
+        }
+        }
+      }
+    }
+  </script>
+
+  <!-- GSAP -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="text-gray-900 font-sans">
+
+<!-- ================= NAVBAR ================= -->
+<header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="assets/logo.jpeg" alt="EDSAN Logo" class="h-12 w-auto" />
+      <span class="font-bold text-xl text-brand">EDSAN Global Resources</span>
+    </a>
+    <nav class="hidden md:flex gap-8 text-sm font-medium">
+      <a href="index.html" class="hover:text-brand">Home</a>
+      <a href="about.html" class="text-brand">About Us</a>
+      <a href="services.html" class="hover:text-brand">Services</a>
+      <a href="hse.html" class="hover:text-brand">HSE</a>
+      <a href="partners.html" class="hover:text-brand">Partners</a>
+      <a href="projects.html" class="hover:text-brand">Projects</a>
+      <a href="contact.html" class="hover:text-brand">Contact</a>
+    </nav>
+
+    <!-- Hamburger Button -->
+    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-800 focus:outline-none z-50 relative">
+      <svg class="w-6 h-6 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center gap-8 text-xl font-medium">
+    <a href="index.html" class="hover:text-brand" onclick="toggleMenu()">Home</a>
+    <a href="about.html" class="hover:text-brand" onclick="toggleMenu()">About Us</a>
+    <a href="services.html" class="hover:text-brand" onclick="toggleMenu()">Services</a>
+    <a href="hse.html" class="hover:text-brand" onclick="toggleMenu()">HSE</a>
+    <a href="partners.html" class="hover:text-brand" onclick="toggleMenu()">Partners</a>
+    <a href="projects.html" class="hover:text-brand" onclick="toggleMenu()">Projects</a>
+    <a href="contact.html" class="hover:text-brand" onclick="toggleMenu()">Contact</a>
+  </div>
+</header>
+
+<!-- ================= HERO CAROUSEL ================= -->
+<section class="relative h-screen overflow-hidden pt-20">
+  <div class="hero-slide absolute inset-0 bg-cover bg-center"
+       style="background-image:url('assets/image1.jpeg')"></div>
+  <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0"
+       style="background-image:url('assets/image2.jpeg')"></div>
+  <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0"
+       style="background-image:url('assets/image3.jpeg')"></div>
+
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <div class="relative z-10 h-full flex items-center">
+    <div class="max-w-6xl mx-auto px-6 text-white hero-content">
+      <h2 class="text-5xl md:text-6xl font-bold mb-6">
+        Engineering Excellence for Oil & Gas Infrastructure
+      </h2>
+      <p class="max-w-2xl text-lg text-gray-200 mb-8">
+        Delivering professional oilfield construction, engineering,
+        inspection and manpower services with uncompromising safety
+        and quality standards.
+      </p>
+      <div class="flex gap-4">
+        <a class="px-6 py-3 bg-brand rounded-md hover:opacity-90">Our Services</a>
+        <a class="px-6 py-3 border border-white rounded-md hover:bg-white hover:text-black">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AWARDS ================= -->
+<section class="py-20 bg-gray-50 reveal">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-12">Recognition & Awards</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded shadow">
+        <h4 class="font-semibold text-brand mb-2">Consistency Made Us</h4>
+        <p class="text-sm text-gray-600">
+          Best Oil & Gas Service Provider in Nigeria – 2013
+          (Capital Finance International, UK)
+        </p>
+      </div>
+      <div class="bg-white p-6 rounded shadow">
+        <h4 class="font-semibold text-brand mb-2">Our Hard Work</h4>
+        <p class="text-sm text-gray-600">
+          Gold Category – International Quality Crown Award (London 2014) &
+          Century International Quality Era Award (Geneva 2014)
+        </p>
+      </div>
+      <div class="bg-white p-6 rounded shadow">
+        <h4 class="font-semibold text-brand mb-2">Safety Consciousness</h4>
+        <p class="text-sm text-gray-600">
+          HSE Recognition Award – ADDAX Petroleum (2014)
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUSTED BY ================= -->
+<section class="py-16 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <h3 class="text-center text-2xl font-bold mb-8">
+      Trusted by Leading Organizations
+    </h3>
+
+    <div class="relative">
+      <!-- Marquee Wrapper -->
+      <div class="flex gap-16 animate-marquee whitespace-nowrap">
+
+  <!-- ExxonMobil -->
+  <div class="flex items-center justify-center min-w-[160px] opacity-70 hover:opacity-100">
+    <img src="https://images.seeklogo.com/logo-png/48/2/opel-new-2023-logo-png_seeklogo-489064.png?v=1965149292432269384" alt="ExxonMobil" class="h-16" />
+  </div>
+
+  <!-- Shell -->
+  <div class="flex items-center justify-center min-w-[160px] opacity-70 hover:opacity-100">
+    <img src="https://images.seeklogo.com/logo-png/49/2/byd-logo-png_seeklogo-496457.png?v=1965149292432269384" alt="Shell" class="h-16" />
+  </div>
+
+  <!-- BP -->
+  <div class="flex items-center justify-center min-w-[160px] opacity-70 hover:opacity-100">
+    <img src="https://images.seeklogo.com/logo-png/63/2/urbo-bankas-logo-png_seeklogo-633465.png?v=1965091765467587168" alt="BP" class="h-16" />
+  </div>
+
+  <!-- Chevron -->
+  <div class="flex items-center justify-center min-w-[160px] opacity-70 hover:opacity-100">
+    <img src="https://images.seeklogo.com/logo-png/64/2/sukhum-international-airport-logo-png_seeklogo-645694.png?v=1965149292432269384" alt="Chevron" class="h-16" />
+  </div>
+
+  <!-- NNPC -->
+  <div class="flex items-center justify-center min-w-[160px] opacity-70 hover:opacity-100">
+    <img src="https://images.seeklogo.com/logo-png/62/2/wat-mobilite-logo-png_seeklogo-629343.png?v=1965091759242016248" alt="NNPC" class="h-16" />
+  </div>
+
+  <!-- (Repeat or add more logos here) -->
+  <div class="flex items-center justify-center min-w-[160px] opacity-70 hover:opacity-100">
+    <img src="https://images.seeklogo.com/logo-png/48/2/opel-new-2023-logo-png_seeklogo-489064.png?v=1965149292432269384" alt="ExxonMobil" class="h-16" />
+  </div>
+
+  <!-- Shell -->
+  <div class="flex items-center justify-center min-w-[160px] opacity-70 hover:opacity-100">
+    <img src="https://images.seeklogo.com/logo-png/49/2/byd-logo-png_seeklogo-496457.png?v=1965149292432269384" alt="Shell" class="h-16" />
+  </div>
+
+  <!-- BP -->
+  <div class="flex items-center justify-center min-w-[160px] opacity-70 hover:opacity-100">
+    <img src="https://images.seeklogo.com/logo-png/63/2/urbo-bankas-logo-png_seeklogo-633465.png?v=1965091765467587168" alt="BP" class="h-16" />
+  </div>
+
+  <!-- Chevron -->
+  <div class="flex items-center justify-center min-w-[160px] opacity-70 hover:opacity-100">
+    <img src="https://images.seeklogo.com/logo-png/64/2/sukhum-international-airport-logo-png_seeklogo-645694.png?v=1965149292432269384" alt="Chevron" class="h-16" />
+  </div>
+
+  <!-- NNPC -->
+  <div class="flex items-center justify-center min-w-[160px] opacity-70 hover:opacity-100">
+    <img src="https://images.seeklogo.com/logo-png/62/2/wat-mobilite-logo-png_seeklogo-629343.png?v=1965091759242016248" alt="NNPC" class="h-16" />
+  </div>
+</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= WELCOME ================= -->
+<section class="py-20 bg-white reveal">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h3 class="text-3xl font-bold mb-4 text-brand">Welcome</h3>
+      <p class="text-gray-700 leading-relaxed">
+        At EDSAN Global Resources, our work is never complete without
+        the final nod of approval from our clients.
+        <br><br>
+        Every project undergoes stringent quality control,
+        detailed inspections and testing before handover.
+        We are fully committed to client satisfaction and
+        long-term partnerships.
+      </p>
+    </div>
+    <img class="rounded-lg shadow"
+         src="assets/image2.jpeg">
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="py-20 bg-gray-50 reveal">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-12">What We Do</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded shadow hover:-translate-y-1 transition">
+        <h4 class="text-xl font-semibold text-brand mb-4">
+          Manpower Support Services
+        </h4>
+        <p class="text-gray-600">
+          Provision of skilled and certified professionals including
+          inspectors, welders, riggers, radiographers and technical personnel.
+        </p>
+      </div>
+      <div class="bg-white p-8 rounded shadow hover:-translate-y-1 transition">
+        <h4 class="text-xl font-semibold text-brand mb-4">
+          QA/QC Inspection Services
+        </h4>
+        <p class="text-gray-600">
+          Advanced quality inspection services ensuring full compliance
+          with client requirements and international standards.
+        </p>
+      </div>
+      <div class="bg-white p-8 rounded shadow hover:-translate-y-1 transition">
+        <h4 class="text-xl font-semibold text-brand mb-4">
+          Engineering Services
+        </h4>
+        <p class="text-gray-600">
+          Specialist engineering solutions delivered with precision,
+          safety and operational efficiency.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HSE ================= -->
+<section class="py-20 bg-white reveal">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <img class="rounded-lg shadow"
+         src="assets/image3.jpeg">
+    <div>
+      <h3 class="text-3xl font-bold mb-4 text-brand">
+        We Believe Safety Is Not By Accident
+      </h3>
+      <p class="text-gray-700 leading-relaxed">
+        Our HSE management system promotes health, safety and environmental
+        protection across all operations. We believe all accidents are
+        preventable and safety is a way of life.
+      </p>
+      <a class="inline-block mt-6 border-b-2 border-brand text-brand font-medium">
+        Read More
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-gray-300 py-16">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+    <div>
+      <h4 class="text-white font-semibold mb-4">Head Office</h4>
+      <p>New world city, Ugbuwangue<br>Warri, Delta State</p>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4">Contact</h4>
+      <p>+234 703 448 0707</p>
+      <p>enquiry@edsanglobal.com</p>
+    </div>
+    <div>
+      <img src="assets/logo.jpeg" alt="EDSAN Logo" class="h-12 w-auto mb-4 rounded" />
+      <h4 class="text-white font-semibold mb-4">EDSAN Global Resources</h4>
+      <p>© 2026. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+  // Mobile Menu Logic
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const icon = btn.querySelector('svg path');
+  let isMenuOpen = false;
+
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    if (isMenuOpen) {
+      menu.classList.remove('translate-x-full');
+      icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+      document.body.style.overflow = 'hidden';
+    } else {
+      menu.classList.add('translate-x-full');
+      icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+      document.body.style.overflow = '';
+    }
+  }
+
+  btn.addEventListener('click', toggleMenu);
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Hero carousel
+  const slides = document.querySelectorAll(".hero-slide");
+  let current = 0;
+
+  setInterval(() => {
+    gsap.to(slides[current], { opacity: 0, duration: 1 });
+    current = (current + 1) % slides.length;
+    gsap.to(slides[current], { opacity: 1, duration: 1 });
+  }, 5000);
+
+  // Scroll reveals
+  gsap.utils.toArray(".reveal").forEach(section => {
+    gsap.from(section, {
+      scrollTrigger: {
+        trigger: section,
+        start: "top 80%"
+      },
+      opacity: 0,
+      y: 40,
+      duration: 1,
+      ease: "power3.out"
+    });
+  });
+</script>
+
+</body>
+</html>
