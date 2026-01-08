@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rope Access Services | EDSAN Global Resources</title>
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpeg">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#5C0100'
+          },
+          fontFamily: {
+            sans: ['"Nunito Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- GSAP -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="font-sans text-gray-900">
+
+<!-- ================= NAVBAR ================= -->
+<header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="assets/logo.jpeg" alt="EDSAN Logo" class="h-12 w-auto" />
+      <span class="font-bold text-xl text-brand">EDSAN Global Resources</span>
+    </a>
+    <nav class="hidden md:flex gap-8 text-sm font-medium">
+      <a href="index.html" class="hover:text-brand">Home</a>
+      <a href="about.html" class="hover:text-brand">About Us</a>
+      <a href="services.html" class="text-brand">Services</a>
+      <a href="hse.html" class="hover:text-brand">HSE</a>
+      <a href="partners.html" class="hover:text-brand">Partners</a>
+      <a href="projects.html" class="hover:text-brand">Projects</a>
+      <a href="contact.html" class="hover:text-brand">Contact</a>
+    </nav>
+
+    <!-- Hamburger Button -->
+    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-800 focus:outline-none z-[70] relative">
+      <svg class="w-6 h-6 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- ================= PAGE HERO ================= -->
+<section class="pt-32 pb-20 bg-gray-900 text-white">
+  <div class="max-w-7xl mx-auto px-6 reveal">
+    <a href="services.html" class="text-gray-400 hover:text-white mb-4 inline-block">&larr; Back to Services</a>
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Rope Access Services</h2>
+    <p class="max-w-3xl text-gray-300 text-lg">
+      The ideal solution for accessing and carrying out work in difficult-to-reach areas safely.
+    </p>
+  </div>
+</section>
+
+<!-- ================= CONTENT ================= -->
+<section class="py-20 bg-white reveal">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <!-- Intro Box -->
+    <div class="mb-12 text-gray-700 leading-relaxed text-lg space-y-6">
+      <p class="font-semibold text-xl text-brand">
+        Rope access is the ideal solution for accessing and carrying out work in difficult-to-reach areas safely, and at a fraction of the cost of conventional solutions such as scaffolds, manual lifts, or cradles.
+      </p>
+      <p>
+        Where height or difficult access presents a problem, rope access can often prove to be the perfect solution, and it is the simplicity of the method that stuns so many people when they see it in action for the first time.
+      </p>
+      <p>
+        Access solutions require a large ground area to operate from, or machinery set high which may be environmentally unfriendly and involves risks to security. Rope access requires no such facilities and poses no such problems. Above all, it offers a proven, safe system of access.
+      </p>
+      <p>
+        EDSAN specializes in accessing and carrying out work in difficult-to-access areas that would otherwise absorb a disproportionate amount of money to complete using traditional access means. Our Rope Access technique is a cost-effective alternative to traditional methods of access such as scaffolds.
+      </p>
+    </div>
+
+    <!-- COMPARISON SECTION -->
+    <div class="bg-gray-50 rounded-xl p-8 shadow-sm border border-gray-100">
+      <h3 class="text-3xl font-bold text-center text-gray-900 mb-12">Cost Comparison: Scaffold vs. Rope Access</h3>
+      
+      <div class="grid lg:grid-cols-2 gap-12">
+        
+        <!-- Scaffold Process -->
+        <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-red-500">
+          <h4 class="text-xl font-bold text-red-600 mb-6 flex items-center gap-2">
+            <span>Traditional Scaffold</span>
+            <span class="text-xs font-normal text-gray-500 bg-gray-100 px-2 py-1 rounded">Labor Intensive</span>
+          </h4>
+          
+          <div class="space-y-4 relative">
+             <!-- Steps Line -->
+             <div class="absolute left-4 top-4 bottom-4 w-0.5 bg-gray-200"></div>
+
+             <div class="relative pl-10">
+               <div class="absolute left-2.5 top-1.5 w-3 h-3 bg-red-400 rounded-full -ml-1.5"></div>
+               <p class="font-bold text-gray-800">Erect Scaffold</p>
+               <p class="text-sm text-gray-600">4 Men x 24 Hours</p>
+             </div>
+             
+             <div class="relative pl-10">
+               <div class="absolute left-2.5 top-1.5 w-3 h-3 bg-red-400 rounded-full -ml-1.5"></div>
+               <p class="font-bold text-gray-800">Paint Coat Removal</p>
+               <p class="text-sm text-gray-600">1 Man x 3 Hours</p>
+             </div>
+
+             <div class="relative pl-10">
+               <div class="absolute left-2.5 top-1.5 w-3 h-3 bg-red-400 rounded-full -ml-1.5"></div>
+               <p class="font-bold text-gray-800">Inspect</p>
+               <p class="text-sm text-gray-600">1 Man x 3 Hours</p>
+             </div>
+
+             <div class="relative pl-10">
+               <div class="absolute left-2.5 top-1.5 w-3 h-3 bg-red-400 rounded-full -ml-1.5"></div>
+               <p class="font-bold text-gray-800">Paint Coat Reinstatement</p>
+               <p class="text-sm text-gray-600">1 Man x 4 Hours</p>
+             </div>
+
+             <div class="relative pl-10">
+               <div class="absolute left-2.5 top-1.5 w-3 h-3 bg-red-400 rounded-full -ml-1.5"></div>
+               <p class="font-bold text-gray-800">Dismantle Scaffold</p>
+               <p class="text-sm text-gray-600">4 Men x 24 Hours</p>
+             </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-gray-100 text-center">
+             <p class="text-sm text-gray-500 uppercase tracking-wide">Total Man Hours</p>
+             <p class="text-4xl font-black text-red-600">202 Hrs</p>
+          </div>
+        </div>
+
+        <!-- Rope Access Process -->
+        <div class="bg-brand text-white p-6 rounded-lg shadow-lg relative overflow-hidden">
+          <h4 class="text-xl font-bold mb-6 flex items-center gap-2">
+            <span>Rope Access Technique</span>
+            <span class="text-xs font-normal text-brand bg-white px-2 py-1 rounded">Efficient</span>
+          </h4>
+
+          <div class="space-y-2 mb-8 bg-white/10 p-4 rounded-lg backdrop-blur-sm">
+            <ul class="space-y-2 text-sm">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                Abseil to work site
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                Remove Paint Coat
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                Inspect
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                Reinstate Paint Coat
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                De-rig Work Site
+              </li>
+            </ul>
+          </div>
+          
+          <div class="text-center relative z-10">
+             <div class="inline-block bg-white text-brand px-6 py-2 rounded-full font-bold text-sm mb-4 shadow-sm">
+               Task Complete: 3 Men x 5 Hrs
+             </div>
+             <p class="text-sm text-red-100 uppercase tracking-wide">Total Man Hours</p>
+             <p class="text-5xl font-black text-white mt-1">15 Hrs</p>
+          </div>
+
+          <!-- Decorative Elements -->
+          <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-2xl"></div>
+          <div class="absolute top-10 right-10 w-20 h-20 bg-white/5 rounded-full blur-xl"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-gray-300 py-16">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+    <div>
+      <h4 class="text-white font-semibold mb-4">Head Office</h4>
+      <p>New world city, Ugbuwangue<br>Warri, Delta State</p>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4">Contact</h4>
+      <p>+234 803 547 8244</p>
+      <p>admin@edsanglobal.com</p>
+    </div>
+    <div>
+      <img src="assets/logo.jpeg" alt="EDSAN Logo" class="h-12 w-auto mb-4 rounded" />
+      <h4 class="text-white font-semibold mb-4">EDSAN Global Resources</h4>
+      <p>© 2026. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile Menu Logic
+  document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      
+      if (btn && menu) {
+        const icon = btn.querySelector('svg path');
+        let isMenuOpen = false;
+
+        window.toggleMenu = function() {
+          isMenuOpen = !isMenuOpen;
+          if (isMenuOpen) {
+            menu.classList.remove('translate-x-full');
+            if(icon) icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            document.body.style.overflow = 'hidden';
+          } else {
+            menu.classList.add('translate-x-full');
+            if(icon) icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            document.body.style.overflow = '';
+          }
+        };
+
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
+        });
+      }
+  });
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.utils.toArray(".reveal").forEach(section => {
+    gsap.from(section, {
+      scrollTrigger: { trigger: section, start: "top 80%" },
+      opacity: 0,
+      y: 40,
+      duration: 1,
+      ease: "power3.out"
+    });
+  });
+</script>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-white z-[10] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center gap-8 text-xl font-medium">
+  <a href="index.html" class="hover:text-brand" onclick="toggleMenu()">Home</a>
+  <a href="about.html" class="hover:text-brand" onclick="toggleMenu()">About Us</a>
+  <a href="services.html" class="hover:text-brand" onclick="toggleMenu()">Services</a>
+  <a href="hse.html" class="hover:text-brand" onclick="toggleMenu()">HSE</a>
+  <a href="partners.html" class="hover:text-brand" onclick="toggleMenu()">Partners</a>
+  <a href="projects.html" class="hover:text-brand" onclick="toggleMenu()">Projects</a>
+  <a href="contact.html" class="hover:text-brand" onclick="toggleMenu()">Contact</a>
+</div>
+
+</body>
+</html>
