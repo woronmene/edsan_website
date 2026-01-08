@@ -52,23 +52,13 @@
     </nav>
 
     <!-- Hamburger Button -->
-    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-800 focus:outline-none z-50 relative">
+    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-800 focus:outline-none z-[70] relative">
       <svg class="w-6 h-6 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
       </svg>
     </button>
   </div>
 
-  <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center gap-8 text-xl font-medium">
-    <a href="index.html" class="hover:text-brand" onclick="toggleMenu()">Home</a>
-    <a href="about.html" class="hover:text-brand" onclick="toggleMenu()">About Us</a>
-    <a href="services.html" class="hover:text-brand" onclick="toggleMenu()">Services</a>
-    <a href="hse.html" class="hover:text-brand" onclick="toggleMenu()">HSE</a>
-    <a href="partners.html" class="hover:text-brand" onclick="toggleMenu()">Partners</a>
-    <a href="projects.html" class="hover:text-brand" onclick="toggleMenu()">Projects</a>
-    <a href="contact.html" class="hover:text-brand" onclick="toggleMenu()">Contact</a>
-  </div>
 </header>
 
 <!-- ================= PAGE HERO ================= -->
@@ -111,7 +101,7 @@
   <div class="max-w-7xl mx-auto px-6">
     <div class="relative rounded-xl overflow-hidden shadow-lg">
       <img
-        src="assets/image2.jpeg"
+        src="assets/image3.jpeg"
         alt="Oil and Gas Safety Training"
         class="w-full h-[420px] object-cover"
       />
@@ -214,16 +204,17 @@
 <footer class="bg-gray-900 text-gray-300 py-16">
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
     <div>
-      <img src="assets/logo.jpeg" alt="EDSAN Logo" class="h-12 w-auto mb-4 rounded" />
-      <h4 class="text-white font-semibold mb-4">EDSAN Global Resources</h4>
-      <p>Engineering & Oilfield Construction Services</p>
+      <h4 class="text-white font-semibold mb-4">Head Office</h4>
+      <p>New world city, Ugbuwangue<br>Warri, Delta State</p>
     </div>
     <div>
       <h4 class="text-white font-semibold mb-4">Contact</h4>
-      <p>+234 703 448 0707</p>
-      <p>enquiry@edsanglobal.com</p>
+      <p>+234 803 547 8244</p>
+      <p>admin@edsanglobal.com</p>
     </div>
     <div>
+      <img src="assets/logo.jpeg" alt="EDSAN Logo" class="h-12 w-auto mb-4 rounded" />
+      <h4 class="text-white font-semibold mb-4">EDSAN Global Resources</h4>
       <p>© 2026. All rights reserved.</p>
     </div>
   </div>
@@ -231,25 +222,33 @@
 
 <script>
   // Mobile Menu Logic
-  const btn = document.getElementById('mobile-menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  const icon = btn.querySelector('svg path');
-  let isMenuOpen = false;
+  document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      
+      if (btn && menu) {
+        const icon = btn.querySelector('svg path');
+        let isMenuOpen = false;
 
-  function toggleMenu() {
-    isMenuOpen = !isMenuOpen;
-    if (isMenuOpen) {
-      menu.classList.remove('translate-x-full');
-      icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
-      document.body.style.overflow = 'hidden';
-    } else {
-      menu.classList.add('translate-x-full');
-      icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
-      document.body.style.overflow = '';
-    }
-  }
+        window.toggleMenu = function() {
+          isMenuOpen = !isMenuOpen;
+          if (isMenuOpen) {
+            menu.classList.remove('translate-x-full');
+            if(icon) icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            document.body.style.overflow = 'hidden';
+          } else {
+            menu.classList.add('translate-x-full');
+            if(icon) icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            document.body.style.overflow = '';
+          }
+        };
 
-  btn.addEventListener('click', toggleMenu);
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
+        });
+      }
+  });
 
   gsap.registerPlugin(ScrollTrigger);
   gsap.utils.toArray(".reveal").forEach(section => {
@@ -262,6 +261,17 @@
     });
   });
 </script>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-white z-[10] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center gap-8 text-xl font-medium">
+  <a href="index.html" class="hover:text-brand" onclick="toggleMenu()">Home</a>
+  <a href="about.html" class="hover:text-brand" onclick="toggleMenu()">About Us</a>
+  <a href="services.html" class="hover:text-brand" onclick="toggleMenu()">Services</a>
+  <a href="hse.html" class="hover:text-brand" onclick="toggleMenu()">HSE</a>
+  <a href="partners.html" class="hover:text-brand" onclick="toggleMenu()">Partners</a>
+  <a href="projects.html" class="hover:text-brand" onclick="toggleMenu()">Projects</a>
+  <a href="contact.html" class="hover:text-brand" onclick="toggleMenu()">Contact</a>
+</div>
 
 </body>
 </html>

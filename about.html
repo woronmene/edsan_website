@@ -52,23 +52,13 @@
     </nav>
 
     <!-- Hamburger Button -->
-    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-800 focus:outline-none z-50 relative">
+    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-800 focus:outline-none z-[70] relative">
       <svg class="w-6 h-6 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
       </svg>
     </button>
   </div>
 
-  <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center gap-8 text-xl font-medium">
-    <a href="index.html" class="hover:text-brand" onclick="toggleMenu()">Home</a>
-    <a href="about.html" class="hover:text-brand" onclick="toggleMenu()">About Us</a>
-    <a href="services.html" class="hover:text-brand" onclick="toggleMenu()">Services</a>
-    <a href="hse.html" class="hover:text-brand" onclick="toggleMenu()">HSE</a>
-    <a href="partners.html" class="hover:text-brand" onclick="toggleMenu()">Partners</a>
-    <a href="projects.html" class="hover:text-brand" onclick="toggleMenu()">Projects</a>
-    <a href="contact.html" class="hover:text-brand" onclick="toggleMenu()">Contact</a>
-  </div>
 </header>
 
 <!-- ================= PAGE HERO ================= -->
@@ -100,6 +90,35 @@
   </div>
 </section>
 
+<!-- ================= VISION & MISSION ================= -->
+<section class="py-20 bg-gray-50 reveal">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+    
+    <!-- Vision -->
+    <div class="bg-white p-8 rounded shadow-lg border-t-4 border-brand">
+      <h3 class="text-2xl font-bold text-brand mb-4">Our Vision</h3>
+      <p class="text-gray-700 leading-relaxed">
+        To set new industry benchmarks by delivering exceptional inspection and 
+        maintenance services, along with competitive solutions that consistently 
+        surpass client expectations in the oil and gas sector.
+      </p>
+    </div>
+
+    <!-- Mission -->
+    <div class="bg-white p-8 rounded shadow-lg border-t-4 border-gray-900">
+      <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+      <p class="text-gray-700 leading-relaxed">
+        Our mission at Edsan Global is to ensure safe, efficient, and reliable 
+        operations in the oil and gas industry by providing world-class inspection 
+        and maintenance services. We are committed to delivering value-driven 
+        solutions, fostering long-term partnerships, and upholding the highest 
+        standards of safety, integrity, and innovation.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 <!-- ================= ABOUT IMAGE ================= -->
 <section class="py-16 bg-gray-50 reveal">
   <div class="max-w-7xl mx-auto px-6">
@@ -127,30 +146,14 @@
 
 <!-- ================= OFFICES ================= -->
 <section class="py-20 bg-gray-50 reveal">
-  <div class="max-w-7xl mx-auto px-6">
-    <h3 class="text-3xl font-bold mb-10">Our Offices</h3>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white p-6 rounded shadow">
-        <h4 class="font-semibold text-brand mb-2">Head Office</h4>
-        <p class="text-sm text-gray-600">
-          New world city, Ugbuwangue,<br>
-          Warri, Delta State
-        </p>
-      </div>
-      <div class="bg-white p-6 rounded shadow">
-        <h4 class="font-semibold text-brand mb-2">Branch Office</h4>
-        <p class="text-sm text-gray-600">
-          No. 13 Okwulle Street, Unity Estate,<br>
-          Port Harcourt, Rivers State
-        </p>
-      </div>
-      <div class="bg-white p-6 rounded shadow">
-        <h4 class="font-semibold text-brand mb-2">Liaison Office</h4>
-        <p class="text-sm text-gray-600">
-          No. 9A Abike Animashaun Street,<br>
-          Lekki Phase 1, Lagos
-        </p>
-      </div>
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h3 class="text-3xl font-bold mb-10">Our Office</h3>
+    <div class="bg-white p-8 rounded shadow max-w-2xl mx-auto border-t-4 border-brand">
+      <h4 class="text-xl font-semibold text-brand mb-4">Head Office</h4>
+      <p class="text-gray-700 text-lg">
+        New world city, Ugbuwangue,<br>
+        Warri, Delta State
+      </p>
     </div>
   </div>
 </section>
@@ -172,7 +175,7 @@
 </section>
 
 <!-- ================= AWARDS ================= -->
-<section class="py-20 bg-gray-50 reveal">
+<!-- <section class="py-20 bg-gray-50 reveal">
   <div class="max-w-7xl mx-auto px-6">
     <h3 class="text-3xl font-bold mb-10">Awards & Recognition</h3>
     <ul class="space-y-3 text-gray-700 max-w-4xl">
@@ -184,7 +187,7 @@
       <li>Best Oil & Gas Service Provider in Nigeria – Capital Finance International (2013)</li>
     </ul>
   </div>
-</section>
+</section> -->
 
 <!-- ================= COMMUNITY AFFAIRS ================= -->
 <section class="py-20 bg-white reveal">
@@ -237,16 +240,17 @@
 <footer class="bg-gray-900 text-gray-300 py-16">
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
     <div>
-      <img src="assets/logo.jpeg" alt="EDSAN Logo" class="h-12 w-auto mb-4 rounded" />
-      <h4 class="text-white font-semibold mb-4">EDSAN Global Resources</h4>
-      <p>Engineering & Oilfield Construction Services</p>
+      <h4 class="text-white font-semibold mb-4">Head Office</h4>
+      <p>New world city, Ugbuwangue<br>Warri, Delta State</p>
     </div>
     <div>
       <h4 class="text-white font-semibold mb-4">Contact</h4>
-      <p>+234 703 448 0707</p>
-      <p>enquiry@edsanglobal.com</p>
+      <p>+234 803 547 8244</p>
+      <p>admin@edsanglobal.com</p>
     </div>
     <div>
+      <img src="assets/logo.jpeg" alt="EDSAN Logo" class="h-12 w-auto mb-4 rounded" />
+      <h4 class="text-white font-semibold mb-4">EDSAN Global Resources</h4>
       <p>© 2026. All rights reserved.</p>
     </div>
   </div>
@@ -254,25 +258,33 @@
 
 <script>
   // Mobile Menu Logic
-  const btn = document.getElementById('mobile-menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  const icon = btn.querySelector('svg path');
-  let isMenuOpen = false;
+  document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      
+      if (btn && menu) {
+        const icon = btn.querySelector('svg path');
+        let isMenuOpen = false;
 
-  function toggleMenu() {
-    isMenuOpen = !isMenuOpen;
-    if (isMenuOpen) {
-      menu.classList.remove('translate-x-full');
-      icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
-      document.body.style.overflow = 'hidden';
-    } else {
-      menu.classList.add('translate-x-full');
-      icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
-      document.body.style.overflow = '';
-    }
-  }
+        window.toggleMenu = function() {
+          isMenuOpen = !isMenuOpen;
+          if (isMenuOpen) {
+            menu.classList.remove('translate-x-full');
+            if(icon) icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            document.body.style.overflow = 'hidden';
+          } else {
+            menu.classList.add('translate-x-full');
+            if(icon) icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            document.body.style.overflow = '';
+          }
+        };
 
-  btn.addEventListener('click', toggleMenu);
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
+        });
+      }
+  });
 
   gsap.registerPlugin(ScrollTrigger);
   gsap.utils.toArray(".reveal").forEach(section => {
@@ -285,6 +297,17 @@
     });
   });
 </script>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-white z-[10] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center gap-8 text-xl font-medium">
+  <a href="index.html" class="hover:text-brand" onclick="toggleMenu()">Home</a>
+  <a href="about.html" class="hover:text-brand" onclick="toggleMenu()">About Us</a>
+  <a href="services.html" class="hover:text-brand" onclick="toggleMenu()">Services</a>
+  <a href="hse.html" class="hover:text-brand" onclick="toggleMenu()">HSE</a>
+  <a href="partners.html" class="hover:text-brand" onclick="toggleMenu()">Partners</a>
+  <a href="projects.html" class="hover:text-brand" onclick="toggleMenu()">Projects</a>
+  <a href="contact.html" class="hover:text-brand" onclick="toggleMenu()">Contact</a>
+</div>
 
 </body>
 </html>

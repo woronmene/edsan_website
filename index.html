@@ -43,15 +43,15 @@
 <body class="text-gray-900 font-sans">
 
 <!-- ================= NAVBAR ================= -->
-<header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur z-50 shadow-sm">
+<header class="fixed  top-0 left-0 w-full bg-white/90 backdrop-blur z-50 shadow-sm">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
     <a href="index.html" class="flex items-center gap-3">
       <img src="assets/logo.jpeg" alt="EDSAN Logo" class="h-12 w-auto" />
       <span class="font-bold text-xl text-brand">EDSAN Global Resources</span>
     </a>
     <nav class="hidden md:flex gap-8 text-sm font-medium">
-      <a href="index.html" class="hover:text-brand">Home</a>
-      <a href="about.html" class="text-brand">About Us</a>
+      <a href="index.html" class="text-brand">Home</a>
+      <a href="about.html" class="hover:text-brand">About Us</a>
       <a href="services.html" class="hover:text-brand">Services</a>
       <a href="hse.html" class="hover:text-brand">HSE</a>
       <a href="partners.html" class="hover:text-brand">Partners</a>
@@ -60,23 +60,13 @@
     </nav>
 
     <!-- Hamburger Button -->
-    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-800 focus:outline-none z-50 relative">
+    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-800 focus:outline-none  z-[100] relative">
       <svg class="w-6 h-6 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
       </svg>
     </button>
   </div>
 
-  <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center gap-8 text-xl font-medium">
-    <a href="index.html" class="hover:text-brand" onclick="toggleMenu()">Home</a>
-    <a href="about.html" class="hover:text-brand" onclick="toggleMenu()">About Us</a>
-    <a href="services.html" class="hover:text-brand" onclick="toggleMenu()">Services</a>
-    <a href="hse.html" class="hover:text-brand" onclick="toggleMenu()">HSE</a>
-    <a href="partners.html" class="hover:text-brand" onclick="toggleMenu()">Partners</a>
-    <a href="projects.html" class="hover:text-brand" onclick="toggleMenu()">Projects</a>
-    <a href="contact.html" class="hover:text-brand" onclick="toggleMenu()">Contact</a>
-  </div>
 </header>
 
 <!-- ================= HERO CAROUSEL ================= -->
@@ -212,17 +202,13 @@
     <div>
       <h3 class="text-3xl font-bold mb-4 text-brand">Welcome</h3>
       <p class="text-gray-700 leading-relaxed">
-        At EDSAN Global Resources, our work is never complete without
-        the final nod of approval from our clients.
+       Edsan Global Limited is a 100% indigenous Nigerian company, with a strong reputation for delivering reliable engineering and maintenance solutions. Since its establishment in 2007 and incorporation in 2017, Edsan has consistently provided end-to-end technical support, ensuring operational efficiency, safety, and compliance for clients across government, public, and private sectors.
         <br><br>
-        Every project undergoes stringent quality control,
-        detailed inspections and testing before handover.
-        We are fully committed to client satisfaction and
-        long-term partnerships.
+       Our engineering and maintenance services cover facility management, equipment inspection, preventive maintenance, and technical upgrades, all executed under stringent quality control measures. With a client-focused approach, we guarantee that every project is completed to the highest standards and only handed over after rigorous testing and final client approval.
       </p>
     </div>
     <img class="rounded-lg shadow"
-         src="assets/image2.jpeg">
+         src="assets/image4.jpeg">
   </div>
 </section>
 
@@ -266,7 +252,7 @@
 <section class="py-20 bg-white reveal">
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
     <img class="rounded-lg shadow"
-         src="assets/image3.jpeg">
+         src="assets/image5.jpeg">
     <div>
       <h3 class="text-3xl font-bold mb-4 text-brand">
         We Believe Safety Is Not By Accident
@@ -276,7 +262,7 @@
         protection across all operations. We believe all accidents are
         preventable and safety is a way of life.
       </p>
-      <a class="inline-block mt-6 border-b-2 border-brand text-brand font-medium">
+      <a href="hse.html" class="inline-block mt-6 border-b-2 border-brand text-brand font-medium">
         Read More
       </a>
     </div>
@@ -292,8 +278,8 @@
     </div>
     <div>
       <h4 class="text-white font-semibold mb-4">Contact</h4>
-      <p>+234 703 448 0707</p>
-      <p>enquiry@edsanglobal.com</p>
+      <p>+234 803 547 8244</p>
+      <p>admin@edsanglobal.com</p>
     </div>
     <div>
       <img src="assets/logo.jpeg" alt="EDSAN Logo" class="h-12 w-auto mb-4 rounded" />
@@ -306,25 +292,35 @@
 <!-- ================= SCRIPTS ================= -->
 <script>
   // Mobile Menu Logic
-  const btn = document.getElementById('mobile-menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  const icon = btn.querySelector('svg path');
-  let isMenuOpen = false;
+  // Check if we are on client side (though this is static HTML)
+  document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      
+      if (btn && menu) {
+        const icon = btn.querySelector('svg path');
+        let isMenuOpen = false;
 
-  function toggleMenu() {
-    isMenuOpen = !isMenuOpen;
-    if (isMenuOpen) {
-      menu.classList.remove('translate-x-full');
-      icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
-      document.body.style.overflow = 'hidden';
-    } else {
-      menu.classList.add('translate-x-full');
-      icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
-      document.body.style.overflow = '';
-    }
-  }
+        // Define the global toggle function or attach listener directly
+        window.toggleMenu = function() {
+          isMenuOpen = !isMenuOpen;
+          if (isMenuOpen) {
+            menu.classList.remove('translate-x-full');
+            if(icon) icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            document.body.style.overflow = 'hidden';
+          } else {
+            menu.classList.add('translate-x-full');
+            if(icon) icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            document.body.style.overflow = '';
+          }
+        };
 
-  btn.addEventListener('click', toggleMenu);
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
+        });
+      }
+  });
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -352,6 +348,17 @@
     });
   });
 </script>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-white z-[10] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center gap-8 text-xl font-medium">
+  <a href="index.html" class="hover:text-brand" onclick="toggleMenu()">Home</a>
+  <a href="about.html" class="hover:text-brand" onclick="toggleMenu()">About Us</a>
+  <a href="services.html" class="hover:text-brand" onclick="toggleMenu()">Services</a>
+  <a href="hse.html" class="hover:text-brand" onclick="toggleMenu()">HSE</a>
+  <a href="partners.html" class="hover:text-brand" onclick="toggleMenu()">Partners</a>
+  <a href="projects.html" class="hover:text-brand" onclick="toggleMenu()">Projects</a>
+  <a href="contact.html" class="hover:text-brand" onclick="toggleMenu()">Contact</a>
+</div>
 
 </body>
 </html>

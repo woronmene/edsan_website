@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mechanical Integrity Inspection Services | EDSAN Global Resources</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#5C0100'
+          },
+          fontFamily: {
+            sans: ['"Nunito Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- GSAP -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="font-sans text-gray-900">
+
+<!-- ================= NAVBAR ================= -->
+<header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="assets/logo.jpeg" alt="EDSAN Logo" class="h-12 w-auto" />
+      <span class="font-bold text-xl text-brand">EDSAN Global Resources</span>
+    </a>
+    <nav class="hidden md:flex gap-8 text-sm font-medium">
+      <a href="index.html" class="hover:text-brand">Home</a>
+      <a href="about.html" class="hover:text-brand">About Us</a>
+      <a href="services.html" class="text-brand">Services</a>
+      <a href="hse.html" class="hover:text-brand">HSE</a>
+      <a href="partners.html" class="hover:text-brand">Partners</a>
+      <a href="projects.html" class="hover:text-brand">Projects</a>
+      <a href="contact.html" class="hover:text-brand">Contact</a>
+    </nav>
+
+    <!-- Hamburger Button -->
+    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-800 focus:outline-none z-[70] relative">
+      <svg class="w-6 h-6 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- ================= PAGE HERO ================= -->
+<section class="pt-32 pb-20 bg-gray-900 text-white">
+  <div class="max-w-7xl mx-auto px-6 reveal">
+    <a href="services.html" class="text-gray-400 hover:text-white mb-4 inline-block">&larr; Back to Services</a>
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Mechanical Integrity Inspection Services</h2>
+    <p class="max-w-3xl text-gray-300 text-lg">
+      Ensuring safety, compliance, and longevity for your critical assets.
+    </p>
+  </div>
+</section>
+
+<!-- ================= CONTENT ================= -->
+<section class="py-20 bg-white reveal">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <!-- Main Description -->
+    <div class="max-w-4xl mb-12 text-gray-700 leading-relaxed text-lg space-y-6">
+      <p>
+        Our Mechanical Integrity Inspection Services provides maintenance, support to onshore and offshore operations and our services include analysis and design services for facility and structural components, replacements, refurbishments as well as combination for execution.
+      </p>
+      <p>
+        As a result of external factors and use, offshore and onshore facilities and their components may experience material failure such as corrosion, wall loss, mechanical integrity anomaly, stress and strain during their service life. These effects are potentially dangerous and can result in unplanned shutdowns.
+      </p>
+      <p>
+        With non-destructive testing (NDT), we can determine the presence of invisible defects in materials without any negative effects on the materials. Our approach to mechanical integrity is executed according to international and national codes and standards at the lowest implementation costs.
+      </p>
+    </div>
+
+    <!-- Service Lists -->
+    <h3 class="text-2xl font-bold text-brand mb-8 border-b pb-2 inline-block">Services offered include:</h3>
+    
+    <div class="grid md:grid-cols-3 gap-10 text-gray-700">
+      
+      <!-- Conventional NDT -->
+      <div>
+        <h4 class="font-bold text-xl mb-4 text-gray-900">Conventional NDT</h4>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Ultrasonic Testing
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Eddy Current Testing
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Magnetic Particle Inspection
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Visual Inspection
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Cathodic Protection
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Thermography
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Dye-Penetrant Inspection
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Coefficient of Friction Testing for Helipads
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Borescope
+          </li>
+        </ul>
+      </div>
+
+      <!-- Advanced NDT Column 1 -->
+      <div>
+        <h4 class="font-bold text-xl mb-4 text-gray-900">Advanced NDT</h4>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Digital Radiography
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Internal Rotary Inspection System (IRIS)
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Alternating Current Field Measurement (ACFM)
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Magnetic Flux Leakage (MFL)
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Corrosion Under Insulation (CUI)
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Acoustic Emission
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Phased Array Ultrasonic Testing (PAUT)
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Time of Flight Diffraction (TOFD)
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Pulsed Eddy Current (PEC) Testing
+          </li>
+        </ul>
+      </div>
+
+      <!-- Advanced NDT Column 2 / Other Services -->
+      <div>
+        <h4 class="font-bold text-xl mb-4 text-gray-900">Other Services</h4>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Calibration of valves
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Calibrations of storage tanks
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Repairs
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Welder qualification
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Tank survey
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Lifting equipment inspection
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand mt-1.5">•</span> Inspection and certification of rope access equipment
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-900 text-gray-300 py-16">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+    <div>
+      <h4 class="text-white font-semibold mb-4">Head Office</h4>
+      <p>New world city, Ugbuwangue<br>Warri, Delta State</p>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4">Contact</h4>
+      <p>+234 803 547 8244</p>
+      <p>admin@edsanglobal.com</p>
+    </div>
+    <div>
+      <img src="assets/logo.jpeg" alt="EDSAN Logo" class="h-12 w-auto mb-4 rounded" />
+      <h4 class="text-white font-semibold mb-4">EDSAN Global Resources</h4>
+      <p>© 2026. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile Menu Logic
+  document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      
+      if (btn && menu) {
+        const icon = btn.querySelector('svg path');
+        let isMenuOpen = false;
+
+        window.toggleMenu = function() {
+          isMenuOpen = !isMenuOpen;
+          if (isMenuOpen) {
+            menu.classList.remove('translate-x-full');
+            if(icon) icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            document.body.style.overflow = 'hidden';
+          } else {
+            menu.classList.add('translate-x-full');
+            if(icon) icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            document.body.style.overflow = '';
+          }
+        };
+
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
+        });
+      }
+  });
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.utils.toArray(".reveal").forEach(section => {
+    gsap.from(section, {
+      scrollTrigger: { trigger: section, start: "top 80%" },
+      opacity: 0,
+      y: 40,
+      duration: 1,
+      ease: "power3.out"
+    });
+  });
+</script>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-white z-[10] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center gap-8 text-xl font-medium">
+  <a href="index.html" class="hover:text-brand" onclick="toggleMenu()">Home</a>
+  <a href="about.html" class="hover:text-brand" onclick="toggleMenu()">About Us</a>
+  <a href="services.html" class="text-brand" onclick="toggleMenu()">Services</a>
+  <a href="hse.html" class="hover:text-brand" onclick="toggleMenu()">HSE</a>
+  <a href="partners.html" class="hover:text-brand" onclick="toggleMenu()">Partners</a>
+  <a href="projects.html" class="hover:text-brand" onclick="toggleMenu()">Projects</a>
+  <a href="contact.html" class="hover:text-brand" onclick="toggleMenu()">Contact</a>
+</div>
+
+</body>
+</html>
